@@ -1,0 +1,22 @@
+.mainDashboardStatsBox{
+    flex-direction: row!important;
+}
+.costBenifiteBox{
+    background-color: #ffffff;
+    flex:.95;
+}
+.pmpAnalysisBox{
+   flex:3.05
+}
+@media (min-width>=320) and (max-width<=568)  {
+    .mainDashboardStatsBox{
+        flex-direction: column!important;
+    }
+    .enrollmentMainBox{
+        flex-direction: column!important;
+    }
+    .costBenifiteBox,.pmpAnalysisBox{
+        flex:1
+    }
+
+}
