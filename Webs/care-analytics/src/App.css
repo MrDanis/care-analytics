@@ -12,3 +12,86 @@
 .commonBorder{
   border:'2px solid #f5f5f5'
 }
+.chatBoxLeftSide,.chatBoxRightSide{
+  background-color:#f9f9f9;
+}
+/* Chat Box Left Side Styling (Start) */
+.userProfileDataBox{
+  height:10vh;
+  margin-bottom: 1rem;
+}
+.userContactBox{
+  height: 80vh;
+  overflow:hidden;
+  overflow-y: scroll;
+  border:0px solid red;
+}
+.userContactList{
+  cursor:pointer;
+}
+/* Chat Box Left Side Styling (End) */
+/* My-Chat box header (START)*/
+.myChatBoxHeader{
+  border-bottom: 1px solid silver;
+  display:flex;
+  align-items: center;
+}
+/* My-Chat box header (END)*/
+/* My-Chat box Footer (START)*/
+.myChatBoxFooter{
+  border-top: 1px solid silver;
+}
+/* My-Chat box Footer (END)*/
+.myChatBox{
+  height:80vh;
+  overflow:hidden;
+  overflow-y: scroll;
+}
+.senderBox {
+  align-self: flex-start;
+}
+.senderBox .myChat p{
+  background-color: #f9f9f9;
+  color:#000000;
+  border-radius: 15px 0px 15px 0px;
+}
+/* ReciverBox Start */
+.reciverBox{
+  align-self: flex-end;
+}
+.reciverBox .myChat{
+  flex-direction: row-reverse;
+}
+.reciverBox .myChat p{
+  background-color: #585ce5;
+  color:#ffffff;
+  border-radius: 0px 15px 0px 15px;
+}
+/* ReciverBox End */
+
+/* .myChatBox .chatMessage:nth-child(odd){
+  align-self: flex-start;
+}
+.myChatBox .chatMessage:nth-child(even){
+  align-self: flex-end;
+}
+.myChatBox .chatMessage:nth-child(even) .myChat{
+  flex-direction: row-reverse;
+}
+.myChatBox .chatMessage:nth-child(odd) .myChat p{
+  background-color: #f9f9f9;
+  color:#000000;
+  border-radius: 15px 0px 15px 0px;
+}
+.myChatBox .chatMessage:nth-child(even) .myChat p{
+  background-color: #585ce5;
+  color:#ffffff;
+  border-radius: 0px 15px 0px 15px;
+} */
+.chatBoxMesageSend{
+  background-color: #f9f9f9;
+  border: 2px solid #e8e5e5;
+}
+.sendMessageButton{
+  cursor: pointer;
+}
