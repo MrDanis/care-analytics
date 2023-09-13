@@ -3,10 +3,11 @@ import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
 import Header from '../components/header'
 import Home from '../views/home'
 import TcmScreenView from '../views/tcmScreenView'
-import UserFeatures from '../views/userFeatures'
+import UserFeatures from '../views/carePerformance/userFeatures'
 import Programe from '../views/programe'
 import NewDashboard from '../views/newDashboard/newDashboard'
 import Communication from '../views/patientCommunication/communication'
+import SpecificProfile from '../views/specificUserProfile/specificProfile'
 const index = () => {
   return (
     <Router>
@@ -17,6 +18,7 @@ const index = () => {
             <Route path='/user-features' element={<UserFeatures/>} />
             <Route path='/tcm-report-view' element={<TcmScreenView/>}/>
             <Route path='/programs' element={<Programe/>} />
+            <Route path='/user-profile' element={<SpecificProfile/>}/>
             <Route path='/patient-communication' element={<Communication/>} />
 
             </Routes>

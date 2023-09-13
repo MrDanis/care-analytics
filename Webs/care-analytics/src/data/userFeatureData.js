@@ -90,6 +90,21 @@ export const userFeatureData = {
         },
 
     ],
+    teamMember:{
+        teamMembersCards:[
+            {memberName:'Asfan'},
+            {memberName:'Farhan'},
+            {memberName:'Hina'},
+            {memberName:'Hanan'},
+            {memberName:'Missbah'},
+            {memberName:'Asad'},
+            {memberName:'Danish'},
+            {memberName:'Taimoor'},
+        ],
+        teamMembersTable: [
+            {}
+        ]
+    },
     hospitalVisitReport:[
         {
             hospitalTextLabel:'In-Patient',

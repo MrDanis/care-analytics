@@ -1,17 +1,23 @@
 import React,{useState} from 'react'
 import {Container,Row,Stack,Dropdown} from 'react-bootstrap'
-import MainHome from '../Layout/MainHome'
-import {FaUserCircle} from 'react-icons/fa'
+import MainHome from '../../Layout/MainHome'
+import {FaUserCircle,FaColumns} from 'react-icons/fa'
+import {AiOutlineBars} from 'react-icons/ai'
 import {BsFillCalendarFill} from 'react-icons/bs'
-import { userFeatureData } from '../data/userFeatureData'
+
+import { userFeatureData } from '../../data/userFeatureData'
 import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import CardViewTeamMember from './components/cardViewTeamMember'
+import TableViewTeamMember from './components/tableViewTeamMember'
 import Highcharts, { color } from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
-import { colors } from '../assets/colors'
-
+import { colors } from '../../assets/colors'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 const userFeatures = () => {
   console.log('Data of the user feature is : ',userFeatureData);
+  const [isTableView,setisTableView] = useState('card');
   const [chartOptions,setchartOptions] = useState({
     chart: {
         type: 'column',
@@ -126,7 +132,20 @@ const [chartOptionsEnrollment,setchartOptionsEnrollment] = useState({
       data: [78, 98, 93, 106, 84, 105, 104,106, 129, 144, 176, 135]
 
   }]
-})
+});
+const handleViewChange = (type) =>{
+   switch (type) {
+    case 0:
+      setisTableView('card')
+      break;
+      case 1:
+        setisTableView('table')
+      break;
+   
+    default:
+      break;
+   }
+}
   return (
    <MainHome>
       <Container className='m-0 p-0 border border-0 border-success' fluid style={{backgroundColor:'#f5f7fe'}}>
@@ -317,8 +336,7 @@ const [chartOptionsEnrollment,setchartOptionsEnrollment] = useState({
                   {/* Task Stats cards (START) */}
                   {
                     userFeatureData.tasksStatsData.map((item,index)=>{
-                      return(
-                        
+                      return(    
                           <div className='d-flex flex-column justify-content-between  m-2 p-2 rounded bg-white gutter-2' style={{flex:1,borderLeft:index===0?'4px solid rgb(0 198 249)':index===1?'4px solid rgb(166 166 255)':index===2?'4px solid rgb(220 189 92)':index===3?'4px solid rgb(88 92 229)':index===4?'4px solid rgb(88 92 229)':'4px solid rgb(88 92 229)'}}>
                             <p className='m-0 p-0 text-muted' style={{fontSize:'.85rem'}}>{
                               item?.taskRecordLabel
@@ -331,10 +349,7 @@ const [chartOptionsEnrollment,setchartOptionsEnrollment] = useState({
                               {item?.taskRecordTotalValue}
                             </small>
                             </p>
-
                           </div>
-                         
-                        
                       )
                     })
                   }
@@ -342,8 +357,37 @@ const [chartOptionsEnrollment,setchartOptionsEnrollment] = useState({
                </div>
              </Stack>
              {/* Team Member component (START) */}
-             <div className='container-fluid m-0 p-0'>
-
+             <div className='container-fluid mb-4 m-0 p-2 border border-1 rounded bg-transparent'>
+                 <div className='row m-0 p-0'>
+                   <div className='col-12 d-flex align-items-center justify-content-between m-0 p-0 border border-0 border-danger'>
+                    <span className='fw-bold text-wrap'>
+                        {
+                          isTableView==='card'?'Team Members':''
+                        } 
+                    </span>
+                    <div className='d-flex border border-0 border-dark'>
+                     <div className='d-flex border border-0 border-success'>
+                      {/* back button */}
+                     
+                      {/* next button */}
+                     </div>
+                     <div className='d-flex align-items-center border border-0 border-danger'>
+                      <AiOutlineBars onClick={()=>{handleViewChange(0)}} className='mx-2' size={20}/>
+                      <FaColumns onClick={()=>{handleViewChange(1)}} size={20}/>   
+                     </div>
+                      {/* Card Icon */}
+                      {/* Table Icon */}
+                    </div>
+                   </div>
+                   <div className='col-12 m-0 p-0'>
+                   {
+                    isTableView==='card'?
+                      <CardViewTeamMember data={userFeatureData?.teamMember?.teamMembersCards} />
+                      :
+                      <TableViewTeamMember data={'Table test data from component check'}/>
+                   }
+                   </div>
+                 </div>
              </div>
              {/* Team Member component (END) */}
              {/* Hospital report component (START) */}

@@ -29,26 +29,20 @@ export const  newdashboardData = {
     pmpCostAnalysis:{
         data:[{
             name: 'Complete Tasks',
-            data: [49, 71, 106, 129, 144, 176, 135,106, 129, 144, 176, 135]
+            data: [49, 91, 46, 129, 90]
     
         }, {
             name: 'Completed Appointment',
-            data: [78, 98, 93, 106, 84, 105, 104,106, 129, 144, 176, 135]
+            data: [78, 48, 96, 66, 110]
         }],
        xAxisLabels:[
-       'Catherine',
-       'Harlod',
-       'Victoria Daigle',
-       'Thelma Paschall',
-       'Howard Cleaves',
-       'Clifton Merritt',
-       'Willie Pope',
-       'Willie Pope',
-       'Willie Pope',
-       'Willie Pope',
-       'Willie Pope',
-       'Willie Pope',],
-       type:'column',
+          '2019',
+          '2020',
+          '2021',
+          '2022',
+          '2023'
+       ],
+       type:'spline',
        title:'PMPM Cost Analysis'
     },
     pcpVisits:{

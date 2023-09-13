@@ -41,6 +41,22 @@ const pcpVisitsReport = ({title,data,xAxisLabels,type}) => {
         },
         series: data
     });
+    const handleChartUpdate = (type) => {
+      switch (type) {
+        case 0:
+            alert(`Chart Update type is : ${type}`)
+            break;
+        case 1:
+            alert(`Chart Update type is : ${type}`)
+            break;
+        case 2:
+            alert(`Chart Update type is : ${type}`)
+            break;
+      
+        default:
+            break;
+      }
+    }
   return (
     <div className='col-12 m-0 p-2 bg-white commonBorder'>
             <div className='d-flex align-items-center justify-content-between'>
@@ -48,13 +64,13 @@ const pcpVisitsReport = ({title,data,xAxisLabels,type}) => {
                    {title}
                 </p>
                 <Stack className='border border-1 rounded' direction="horizontal" gap={0}>
-                    <div className="px-2 p-1 border border-1" style={{backgroundColor:'transparent',borderTopLeftRadius:'.25rem',borderBottomLeftRadius:'.25rem'}}>
+                    <div className="px-2 p-1 border border-1" onClick={()=>{handleChartUpdate(0)}} style={{backgroundColor:'transparent',borderTopLeftRadius:'.25rem',borderBottomLeftRadius:'.25rem',cursor:'pointer'}}>
                      <small className='text-dark'>Last 3 Years</small>
                      </div>
-                    <div className="px-2 p-1 border-1 text-dark" style={{backgroundColor:'transparent'}}>
+                    <div className="px-2 p-1 border-1 text-dark" onClick={()=>{handleChartUpdate(1)}} style={{backgroundColor:'transparent'}}>
                     <small>Year to Date</small>
                     </div>
-                    <div className="px-2 p-1 text-light" style={{backgroundColor:'#494bbb',borderTopRightRadius:'.25rem',borderBottomRightRadius:'.25rem'}}>
+                    <div className="px-2 p-1 text-light" onClick={()=>{handleChartUpdate(2)}} style={{backgroundColor:'#494bbb',borderTopRightRadius:'.25rem',borderBottomRightRadius:'.25rem'}}>
                     <small>Last 12 months</small>
                     </div>
                 </Stack>
