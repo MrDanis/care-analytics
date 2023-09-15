@@ -8,8 +8,8 @@ import {MdOutlineSettings} from 'react-icons/md'
 const sidebar = () => {
      const history = useHref();
   return (
-    <div className='customSidebar mt-2 m-0 p-0 rounded' >
-        <Stack className='border border-0' direction='vertical' gap={4}>
+    <div className='customSidebar mt-2 m-0 px-2 p-0 rounded' >
+        <Stack className='border border-0 px-1' direction='vertical' gap={4}>
            <Button  variant='ghost' style={{backgroundColor:history.length===1?colors.mainTemeColor:'transparent'}}>
              <Link to='/'>
                <AiOutlineFolderOpen fill={history.length===1?'white':'black'} color='grey' size={20}/>

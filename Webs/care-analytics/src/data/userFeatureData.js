@@ -92,14 +92,14 @@ export const userFeatureData = {
     ],
     teamMember:{
         teamMembersCards:[
-            {memberName:'Asfan'},
-            {memberName:'Farhan'},
-            {memberName:'Hina'},
-            {memberName:'Hanan'},
-            {memberName:'Missbah'},
-            {memberName:'Asad'},
-            {memberName:'Danish'},
-            {memberName:'Taimoor'},
+            {memberName:'Victoria Daigle',memberDesignation:'Care Coordinator'  , memberProfileData:{'Engagements':150,'Eligible':56,'Reassigned':710,'Patient in Care':789,'Task Complete':50,'Appointment Complete':18}},
+            {memberName:'Johnson Smith',memberDesignation:'Care Coordinator'    , memberProfileData:{'Engagements':150,'Eligible':56,'Reassigned':710,'Patient in Care':789,'Task Complete':50,'Appointment Complete':18}},
+            {memberName:'Williams Brown',memberDesignation:'Care Coordinator'   , memberProfileData:{'Engagements':150,'Eligible':56,'Reassigned':710,'Patient in Care':789,'Task Complete':50,'Appointment Complete':18}},
+            {memberName:'Jones Garcia',memberDesignation:'Care Coordinator'     , memberProfileData:{'Engagements':150,'Eligible':56,'Reassigned':710,'Patient in Care':789,'Task Complete':50,'Appointment Complete':18}},
+            {memberName:'Hanan',memberDesignation:'Care Coordinator'            , memberProfileData:{'Engagements':150,'Eligible':56,'Reassigned':710,'Patient in Care':789,'Task Complete':50,'Appointment Complete':18}},
+            {memberName:'Asad',memberDesignation:'Care Coordinator'             , memberProfileData:{'Engagements':150,'Eligible':56,'Reassigned':710,'Patient in Care':789,'Task Complete':50,'Appointment Complete':18}},
+            {memberName:'Danish',memberDesignation:'Care Coordinator'           , memberProfileData:{'Engagements':150,'Eligible':56,'Reassigned':710,'Patient in Care':789,'Task Complete':50,'Appointment Complete':18}},
+            {memberName:'Missbah',memberDesignation:'Care Coordinator'          , memberProfileData:{'Engagements':150,'Eligible':56,'Reassigned':710,'Patient in Care':789,'Task Complete':50,'Appointment Complete':18}},
         ],
         teamMembersTable: [
             {}

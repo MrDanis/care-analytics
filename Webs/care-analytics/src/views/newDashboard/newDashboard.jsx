@@ -33,10 +33,10 @@ const newDashboard = () => {
                          </p>
                   </div>
                   <div className='d-flex border border-0 border-warning'>
-                  <Stack gap={3} direction="horizontal">
+                  <Stack className='align-items-center' gap={3} direction="horizontal">
                     <div className="px-0 p-2 border border-0 border-success" style={{minWidth:'170px'}}>
                     <Dropdown>
-                      <Dropdown.Toggle className='bg-transparent d-flex align-items-center justify-content-between outline-none border-0 shadow fs-6 w-100' id="dropdown-basic">
+                      <Dropdown.Toggle className='d-flex align-items-center justify-content-between outline-none border-0 shadow fs-6 w-100' style={{backgroundColor:'#7a7cec'}} id="dropdown-basic">
                         23 Contracts
                       </Dropdown.Toggle>
                         <Dropdown.Menu>
@@ -47,7 +47,7 @@ const newDashboard = () => {
                       </Dropdown>
                     </div>
                     <div className="pt-0 p-2 border border-0 border-danger">
-                    <FaUserCircle fill='white' size={40} className='p-0 mx-0  headerHumberger' style={{}}/>
+                    <FaUserCircle fill='white' size={40} className='p-0 m-0  headerHumberger'/>
                     </div>
                   </Stack>
                   </div>
@@ -88,7 +88,7 @@ const newDashboard = () => {
                 </Stack>
                 </div>
                 <div className='d-flex m-0 p-0 border border-0 border-danger'>
-                  <BsFillCalendarFill fill='white' size={25} className='p-0 mx-4'/>
+                  {/* <BsFillCalendarFill fill='white' size={25} className='p-0 mx-4'/> */}
                   <Stack direction="horizontal" gap={0}>
                      <div className="px-2 p-1" style={{backgroundColor:'#7a7cec',borderTopLeftRadius:'.25rem',borderBottomLeftRadius:'.25rem'}}>
                       <small className='text-light'>Last 3 Years</small>

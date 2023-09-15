@@ -1,65 +1,3 @@
-// import React,{useState} from 'react'
-// import Slider from "react-slick";
-// const cardViewTeamMember = ({data}) => {
-//   const [carosalSetting,setcarosalSetting] = useState({
-//     dots: true,
-//       infinite: true,
-//       speed: 500,
-//       slidesToShow: 4,
-//       slidesToScroll: 1,
-//       dots: false
-//   });
-// const handleNext = () => {
-//     console.log('next button is clicked....')
-//     slider.slickNext()
-// }
-// const handlePrevious = () => {
-//     slider.slickPrev()
-//     console.log('previous button is clicked....')
-// }
-// //   ref={c => (this.slider = c)} 
-//     return (
-//     <div className='container-fluid m-0 px-5 p-0'>
-//         <div className='row w-75 m-0 p-0'>
-//         <div>
-//         <h2>Previous and Next methods</h2>
-//         <Slider {...carosalSetting}>
-//           <div key={1}>
-//             <h3>1</h3>
-//           </div>
-//           <div key={2}>
-//             <h3>2</h3>
-//           </div>
-//           <div key={3}>
-//             <h3>3</h3>
-//           </div>
-//           <div key={4}>
-//             <h3>4</h3>
-//           </div>
-//           <div key={5}>
-//             <h3>5</h3>
-//           </div>
-//           <div key={6}>
-//             <h3>6</h3>
-//           </div>
-//         </Slider>
-//         <div style={{ textAlign: "center" }}>
-//           <button className="button" onClick={handlePrevious}>
-//             Previous
-//           </button>
-//           <button className="button" onClick={handleNext}>
-//             Next
-//           </button>
-//         </div>
-//       </div>
-//         </div>     
-        
-      
-//     </div>
-//   )
-// }
-
-// export default cardViewTeamMember
 import React, { Component } from "react";
 import {GrFormNext,GrFormPrevious} from 'react-icons/gr'
 import { Link } from "react-router-dom";
@@ -116,44 +54,59 @@ export default class cardViewTeamMember extends Component {
       ]
     };
     return (
-      <div className="mt-3 container-fluid border border-0 border-success position-relative">
+        <div className="container testCon border border-0 border-dark" style={{minWidth:'100%'}}>
+
+        
+     <div className="position-relative border border-0 border-success mt-3 m-0 p-0" style={{width:'100%'}}>
+
         <Slider ref={c => (this.slider = c)} {...settings}>
             {
                 this.props?.data.map((item,index)=>{
                     return(
-                        <div className="p-2 d-flex border border-0 border-danger">
-                           <div className="m-0 d-flex flex-column w-100 rounded border border-1 bg-white p-2">
+                        <div className="p-2 d-flex border border-0 border-danger"> 
+                        {/* Above div is for putting spacing  */}
+                           <div className="m-0 d-flex flex-column w-100 border border-1 bg-white p-3" style={{borderRadius:'.5rem',maxWidth:'22.5rem'}}>
                              {/* Name and designation Column */}
-                             <div className="d-flex flex-wrap w-100 border border-2 border-danger">
-                               <p className=" m-0 p-0"> 
+                             <div className="d-flex justify-content-start align-items-center flex-wrap w-100 border border-0 border-danger">
+                               <div className="p-3 d-flex align-items-center justify-content-center" style={{borderRadius:'1rem',backgroundColor:'#D2CEFE'}}>
+                                    <p className="m-0 p-0" style={{fontSize:'1.5rem',color:'#573BFF'}}>
+                                        VD
+                                    </p>
+                               </div>
+                               <div className="mx-3 d-flex flex-column align-items-start justify-content-start border border-0 border-success">
+                               <p className="m-0 mb-1 p-0 fw-bold" style={{fontSize:'1rem'}} > 
                                   {item?.memberName}
                                </p>
+                               <p className="text-muted m-0 p-0" style={{fontSize:'.85rem'}}> 
+                                  {item?.memberDesignation}
+                               </p>
+
+                               </div>
                              </div>
                              {/* Member Data Column*/}
-                             <div className="d-flex flex-column m-0 p-0 border border-2 border-success">
-                               <p className=" m-0 p-0"> 
-                                  {item?.memberName}
+                             <div className="d-flex flex-column my-2 m-0 p-0 border border-0 border-success">
+                              {
+                                Object.entries(item?.memberProfileData).map(([key,value])=>{
+                                    return(
+                               <p className="d-flex align-items-center justify-content-between border border-0 border-success my-2 p-0" > 
+                                {console.log('Key is : ',key,'Value : ',value)}
+                                 <span className="text-muted fw-light" style={{fontSIze:'.75rem'}}>
+                                    {/* {item?.memberName} */}
+                                    {key}
+                                 </span> 
+                                 <span className="text-dark fw-bold" style={{fontSIze:'1rem'}}>
+                                    {/* {item?.memberName} */}
+                                    {value}
+                                 </span> 
                                </p>
-                               <p className=" m-0 p-0"> 
-                                  {item?.memberName}
-                               </p>
-                               <p className=" m-0 p-0"> 
-                                  {item?.memberName}
-                               </p>
-                               <p className=" m-0 p-0"> 
-                                  {item?.memberName}
-                               </p>
-                               <p className=" m-0 p-0"> 
-                                  {item?.memberName}
-                               </p>
-                               <p className=" m-0 p-0"> 
-                                  {item?.memberName}
-                               </p>
+                                    )
+                                })
+                              }
                              </div>
                              <div className="d-flex align-items-center justify-content-end m-0 px-2 p-0 ">
-                                  <Link className="d-flex text-decoration-none" to={'/user-profile'}>
-                                     <small className="mx-3" style={{color:'#2196f3'}}>View Profile</small>
-                                     <HiMiniArrowUpRight className="rounded-pill p-1 bg-dark" fill="#ffffff" size={20}/>
+                                  <Link className="d-flex align-items-center text-decoration-none" to={'/user-profile'}>
+                                     <small className="mx-3" style={{color:'#585CE5'}}>View Profile</small>
+                                     <HiMiniArrowUpRight className="p-2" style={{backgroundColor:'#585CE5',borderRadius:'.5rem'}} fill="#ffffff" size={35}/>
                                   </Link>
                              </div>
                            </div>
@@ -162,15 +115,17 @@ export default class cardViewTeamMember extends Component {
                 })
             }   
         </Slider>
-        <div className="mb-2 border border-0 border-danger position-absolute" style={{ right:25,top:-42}}>
-          <button className="btn ghost m-0 p-0" onClick={this.previous}>
+        <div className="d-flex justify-content-end mb-2 border border-0 border-danger position-absolute" style={{ right:50,top:-48}}>
+          <button className="btn border-none outline-none box-shadow-none ghost m-0 p-0" onClick={this.previous}>
             <GrFormPrevious className='border border-1 bg-white rounded-pill p-1' size={27}/>
           </button>
           <button className="btn ghost m-0 p-0"  onClick={this.next}>
             <GrFormNext className='border border-1 bg-white rounded-pill p-0 mx-2'  size={27}/>
           </button>
         </div>
-      </div>
+     </div>
+     </div>  
+      
     );
   }
 }

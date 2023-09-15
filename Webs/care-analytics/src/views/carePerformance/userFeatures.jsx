@@ -1,9 +1,9 @@
 import React,{useState} from 'react'
 import {Container,Row,Stack,Dropdown} from 'react-bootstrap'
 import MainHome from '../../Layout/MainHome'
-import {FaUserCircle,FaColumns} from 'react-icons/fa'
+import {FaUserCircle,FaColumns,FaBed,FaBell} from 'react-icons/fa'
 import {AiOutlineBars} from 'react-icons/ai'
-import {BsFillCalendarFill} from 'react-icons/bs'
+import {BsFillCalendarFill,BsFillHospitalFill,BsFillPersonVcardFill} from 'react-icons/bs'
 
 import { userFeatureData } from '../../data/userFeatureData'
 import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar';
@@ -148,7 +148,9 @@ const handleViewChange = (type) =>{
 }
   return (
    <MainHome>
-      <Container className='m-0 p-0 border border-0 border-success' fluid style={{backgroundColor:'#f5f7fe'}}>
+   <div className='w-100 border border-0 border-success'>
+
+      <div className='m-0 p-0 border border-0 border-warning' style={{backgroundColor:'#f5f7fe',flex:1}}>
         <Row className='m-0 px-3 p-0 border border-0 border-danger' style={{backgroundColor:'#5e62e8',minHeight:'250px'}}>
           <div className='m-0 px-0 border border-0 border-dark d-flex flex-column align-items-center justify-content-between' style={{flex:1,paddingBottom:'2.5rem'}}>
               <div className='w-100 d-flex align-items-start justify-content-between mt-2 m-0 p-2 border border-0 border-success'>
@@ -166,7 +168,7 @@ const handleViewChange = (type) =>{
                   <Stack gap={3} direction="horizontal">
                     <div className="px-0 p-2 border border-0 border-success" style={{minWidth:'170px'}}>
                     <Dropdown>
-                      <Dropdown.Toggle className='bg-transparent d-flex align-items-center justify-content-between outline-none border-0 shadow fs-6 w-100' id="dropdown-basic">
+                      <Dropdown.Toggle className='d-flex align-items-center justify-content-between outline-none border-0 shadow fs-6 w-100' style={{backgroundColor:'#7a7cec'}} id="dropdown-basic">
                         23 Contracts
                       </Dropdown.Toggle>
                         <Dropdown.Menu>
@@ -183,7 +185,7 @@ const handleViewChange = (type) =>{
                   </div>
               </div>
               <div className='w-100 d-flex align-items-center justify-content-end p-2 border border-0 border-warning' style={{marginTop:'-2.5rem'}}>
-              <BsFillCalendarFill fill='white' size={25} className='p-0 mx-4'/>
+              {/* <BsFillCalendarFill fill='white' size={25} className='p-0 mx-4'/> */}
               <Stack direction="horizontal" gap={0}>
                  <div className="px-2 p-1" style={{backgroundColor:'#7a7cec',borderTopLeftRadius:'.25rem',borderBottomLeftRadius:'.25rem'}}>
                   <small className='text-light'>Last 3 Years</small>
@@ -199,10 +201,9 @@ const handleViewChange = (type) =>{
           </div>
         </Row>
         <Row className='mx-0 px-4 py-0 border border-0 border-warning' style={{marginTop:'-2rem'}}>
-          <div className='conatiner-fluid m-0 p-0 border border-0 border-success'>
-             <div className='row m-0 p-0'>
+  
              <Stack className='m-0 p-0 border border-0 border-success align-items-start mb-4' direction="horizontal" gap={3}>
-               <div className="m-0 p-3 m-0 border border-1 rounded bg-white" style={{flex:1}}>
+               <div className="h-100 m-0 p-3 m-0 border border-1 rounded bg-white" style={{flex:1}}>
                   {/* All Stats Component Start*/}
                    <div className='container-fluid m-0 p-0 border border-0 border-success'>
                         <div className='row m-0 p-0'>
@@ -217,12 +218,23 @@ const handleViewChange = (type) =>{
                                 return(
                                    <div key={index} className={index%2!==0?'col-12 col-md-6 mb-1 mt-4 m-0 pb-2 p-0 d-flex border border-0 align-items-start justify-content-end':'col-12 col-md-6 mb-1 mt-4 m-0 pb-2 p-0 d-flex border border-0 align-items-start justify-content-start'}>
                                      <div className='d-flex align-items-start mt-1 pt-2 border border-0 border-success'>
-                                      <BsFillCalendarFill fill='#5e62e8' size={30} className='mt-0 m-0 p-0'/>
+                                     {
+                                      index===0?
+                                      <BsFillPersonVcardFill fill='#7963F9' size={35} className='mt-0 m-0 p-2' style={{borderRadius:'.25rem',backgroundColor:'#AFA1FF40'}}/>
+                                      :
+                                      index===1?
+                                      <BsFillHospitalFill fill='#339B9B' size={35} className='mt-0 m-0 p-2' style={{borderRadius:'.25rem',backgroundColor:'#339B9B40'}}/>
+                                      :
+                                      index===2?
+                                      <FaBed fill='#DCBD5C' size={35} className='mt-0 m-0 p-2' style={{borderRadius:'.25rem',backgroundColor:'#DCBD5C40'}}/>
+                                      :
+                                      <FaBell fill='#AFA1FF' size={35} className='mt-0 m-0 p-2' style={{borderRadius:'.25rem',backgroundColor:'#AFA1FF40'}}/>
+                                     }
                                       <p className='text-muted mx-3 m-0 p-0'>
-                                         <small className='m-0 p-0 text-muted'>
+                                         <small className='m-0 p-0 fw-light text-muted' style={{fontSize:'1rem'}}>
                                            {item?.statLable}
                                          </small>
-                                        <p className='text-dark fw-bold fs-4 mt-2 m-0 p-0'>
+                                        <p className='text-dark fw-bold fs-4 mt-2 m-0 p-0' style={{fontSize:'2rem'}}>
                                           {item?.statValue}
                                         </p>
                                       </p>
@@ -356,8 +368,29 @@ const handleViewChange = (type) =>{
                   {/* Task Stats cards (END) */}
                </div>
              </Stack>
+             <Stack className='m-0 mb-4 p-0 border border-0 border-priamry' direction='vertical'>
+             <div className='d-flex align-items-center justify-content-between m-0 p-0 border border-0 border-success'>
+                <span className='fw-bold text-wrap'>
+                        {
+                          isTableView==='card'?'Team Members':''
+                        } 
+                    </span>
+                 <div className='d-flex m-0 p-0'>
+                      <AiOutlineBars onClick={()=>{handleViewChange(0)}} className='mx-2' size={20}/>
+                      <FaColumns onClick={()=>{handleViewChange(1)}} size={20}/>   
+                 </div>
+             </div>
+             <Stack className='m-0 p-0 border border-0 border-danger'>
+             {
+                isTableView==='card'?
+                <CardViewTeamMember data={userFeatureData?.teamMember?.teamMembersCards} />
+                :
+                <TableViewTeamMember data={'Table test data from component check'}/>
+              }
+             </Stack>
+             </Stack>
              {/* Team Member component (START) */}
-             <div className='container-fluid mb-4 m-0 p-2 border border-1 rounded bg-transparent'>
+             <div className='container-fluid mb-4 m-0 p-2 border border-1 rounded bg-transparent d-none'>
                  <div className='row m-0 p-0'>
                    <div className='col-12 d-flex align-items-center justify-content-between m-0 p-0 border border-0 border-danger'>
                     <span className='fw-bold text-wrap'>
@@ -477,7 +510,6 @@ const handleViewChange = (type) =>{
                             <small>Last 12 months</small>
                             </div>
                           </Stack>
-
                         </div>
                         </div>
                         {/* Task Report START */}
@@ -499,17 +531,17 @@ const handleViewChange = (type) =>{
                           }
                         </div>
                         <div className='col-12 mt-4 m-0 p-0'>
-                        <HighchartsReact highcharts={Highcharts} options={chartOptionsEnrollment}/>
+                            <HighchartsReact highcharts={Highcharts} options={chartOptionsEnrollment}/>
                         </div>
-                        </div>
-                        {/* Task Report END */}
-                      </div>
                     </div>
+                        {/* Task Report END */}
+                  </div>
+                </div>
              {/* Enrollment Trend Report END */}
-             </div>
-          </div>
+            
         </Row>
-      </Container>
+      </div>
+   </div>
    </MainHome>
   )
 }
