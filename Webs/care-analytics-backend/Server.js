@@ -4,15 +4,38 @@ const dataStore = require('nedb')
 const app = express();
 const db = new dataStore('care-analytics.db');
 // const programData = require('./Modals/programeData')
-const programRoutes = require('./Routes/programRoutes');
+// const programRoutes = require('./Routes/programRoutes');
+// creating the server for Socket.io
+const http = require("http").Server(app);
+// New import for creating the server is http://localhost:5173/
+const socketIO = require('socket.io')(http, {
+    cors: {
+        origin: "http://localhost:5173",
+        methods: ['GET', 'POST'],
+    }
+});
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+db.loadDatabase();
 app.use(cors({
     origin: '*', // Allow requests from any origin
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true, // Allow cookies to be sent with the request (if applicable)
   }));
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-db.loadDatabase();
+// Listening when the user is connected with the socket.io
+socketIO.on('connection', (socket) => {
+    console.log(`⚡: ${socket.id} user just connected!`);
+    socket.on('send-message',(data)=>{
+        console.log('Message comming from the client is : ',data);
+    })
+    socket.on('disconnect', () => {
+      console.log('🔥: A user disconnected');
+    });
+});
+// Listening the socket is end from here.....
+
+
+//  All the End Points start from the below 
 app.get('/api/fill-programs',(req,res)=>{
     const ProgrameData = [
         {
@@ -567,4 +590,4 @@ app.post('/api/program/update-modules',(req,res)=>{
 // End Point for updating the records (END)
 
 // programRoutes.use('/api/program',programRoutes)
-app.listen(7000,()=>{console.log('Server is listening.....')});
+http.listen(7000,()=>{console.log('Server is listening.....')});

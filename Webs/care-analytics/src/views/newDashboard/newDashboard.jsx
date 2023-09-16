@@ -15,6 +15,7 @@ import ReadmissionPercentage from './dashboardReports/readmissionPercentage'
 import MainHome from '../../Layout/MainHome'
 import { newdashboardData } from '../../data/newDashboardData'
 import './newDashboard.css'
+
 const newDashboard = () => {
   return (
     <MainHome>

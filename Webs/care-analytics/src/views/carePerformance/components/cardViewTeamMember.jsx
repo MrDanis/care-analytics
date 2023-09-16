@@ -65,7 +65,7 @@ export default class cardViewTeamMember extends Component {
                     return(
                         <div className="p-2 d-flex border border-0 border-danger"> 
                         {/* Above div is for putting spacing  */}
-                           <div className="m-0 d-flex flex-column w-100 border border-1 bg-white p-3" style={{borderRadius:'.5rem',maxWidth:'22.5rem'}}>
+                           <div className="m-0 d-flex flex-column w-100 border border-1 bg-white p-3 " style={{borderRadius:'.5rem'}}>
                              {/* Name and designation Column */}
                              <div className="d-flex justify-content-start align-items-center flex-wrap w-100 border border-0 border-danger">
                                <div className="p-3 d-flex align-items-center justify-content-center" style={{borderRadius:'1rem',backgroundColor:'#D2CEFE'}}>

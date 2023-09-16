@@ -1,8 +1,17 @@
-import React,{useEffect} from 'react'
+import React,{useEffect,useRef} from 'react'
 import {Image} from 'react-bootstrap'
 import userIcon from '../../../assets/profile.png'
 import {RiSendPlaneFill} from 'react-icons/ri'
+import { senMessageToUser } from '../../../Features/UserClice'
+import { useDispatch } from 'react-redux'
 const chatMessages = ({data}) => {
+    const dispatch = useDispatch();
+    const messageIs = useRef(null);
+    const handleSendMessage = ()=>{
+      const userMessageIs = messageIs.current.value;
+      dispatch(senMessageToUser({message:userMessageIs}));
+      console.log('User Message is : ',userMessageIs);
+    }
     useEffect(()=>{
       console.log('Data comming from the parent is : ',data);
         handleScrollToTop();
@@ -45,8 +54,8 @@ const chatMessages = ({data}) => {
             {/* Current Selected user Data card (START)*/}
             <div className='d-flex align-items-center m-0 px-4 p-2 myChatBoxFooter' style={{height:'10vh'}}>
                 <div className='d-flex align-items-center justify-content-between w-100 rounded-pill m-0 px-3 p-2 chatBoxMesageSend'>
-                    <input className='mx-2 m-0 p-0 w-100 border-0 bg-transparent outline-none text-wrap fs-6 textMessage' placeholder='Write something here .....'/>
-                    <RiSendPlaneFill fill='white' size={30} className='m-0 p-1 d-flex align-items-center justify-content-center bg-primary rounded-pill sendMessageButton' onClick={()=>{alert('send message')}}/>
+                    <input className='mx-2 m-0 p-0 w-100 border-0 bg-transparent outline-none text-wrap fs-6 textMessage' placeholder='Write something here .....' ref={messageIs}/>
+                    <RiSendPlaneFill fill='white' size={30} className='m-0 p-1 d-flex align-items-center justify-content-center bg-primary rounded-pill sendMessageButton' onClick={handleSendMessage}/>
                 </div>
             </div>
             {/* Current Selected user Data card (END)*/}

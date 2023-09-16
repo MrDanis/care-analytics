@@ -6,47 +6,31 @@ const initialState = {
   userRole:localStorage.getItem('userRole')=== null?'Public':localStorage.getItem('userRole'),
   user:localStorage.getItem('user')===null?'':JSON.parse(localStorage.getItem('user')),
   multiSelectData:multiSelectData,
-  loading:'idle'
+  loading:'idle',
+  socket:null
 }
 // Creating the thunk for login the user
  export const UserLogin = createAsyncThunk('user/login',async(userCredentials)=>{
   console.log('data before sending the api request is : ',userCredentials);
-  // debugger
-  const response = await fetch('http://nodebackend.vetechapp.com/signin/admin',{
-    method:"POST",
-    headers:{
-      'Accept':'application/json',
-      'Content-Type':'application/json',
-    },
-    body:JSON.stringify(userCredentials)
-  });
-  const data = await response.json();
-  return data;
  })
 export const authenticateUse = createSlice({
   name: 'UserAuth',
   initialState:initialState,
   reducers: {
-    isLogin: (state) => {
-      state.isLogin = true;
-      state.userRole=state.user.role;
-      state.loading='idle';
-      // state.userRole='SuperAdmin';
-      // localStorage.setItem('userRole','SuperAdmin')
-      localStorage.setItem('userRole',state.user.role)
-      localStorage.setItem('user',JSON.stringify(state.user));
-      localStorage.setItem('JwtToken',state.userJWTToken);
+    updateUser:(state,action)=>{
+      console.log('user request comming form the login is : ',action?.payload?.isLogin);
+       state.isLogin = action?.payload?.isLogin;
     },
-    Logout: (state) => {
-      state.isLogin = false
-      state.userRole='Public';
-      state.userJWTToken=''
-      state.user=''
-      localStorage.setItem('userRole','Public')
-      localStorage.setItem('user',null);
-      localStorage.setItem('JwtToken',null);
-    }
-    ,
+    getSocket:(state,action)=>{
+       state.socket = action?.payload?.socket;
+       console.log('Socket is : ',action?.payload)
+    },
+    senMessageToUser:(state,action)=>{
+      // console.log('Message from the user is  : ',userMessage);
+      let userMessage = action?.payload?.message;
+      console.log('user message is : ',action?.payload?.message);
+      state.socket.emit('send-message',userMessage); 
+    },
     UpdateMultiSelectData:(state,action)=>{
        console.log('action is : ',action?.payload);
        let currentActiveIndex = state.multiSelectData.findIndex(obj => obj?.parentId === action?.payload?.parentId);
@@ -75,24 +59,10 @@ export const authenticateUse = createSlice({
        }
        console.log('Multiselect data after changing the data is : ',state.multiSelectData);
     }
-  },
-  extraReducers:(builder)=>{
-    builder.addCase(UserLogin.pending,(state)=>{
-     state.loading='loading';
-    })
-    builder.addCase(UserLogin.fulfilled,(state,action)=>{
-     state.loading='succeeded';
-     console.log('toolkit api response : ',action.payload);
-     state.user=action.payload.payload;
-     state.userJWTToken=action.payload.token;
-    })
-    builder.addCase(UserLogin.rejected,(state)=>{
-     state.loading='failed';
-    })
   }
 })
 
 // Public Action creators are generated for each case reducer function
-export const { isLogin,Logout,UpdateMultiSelectData } = authenticateUse.actions
+export const { UpdateMultiSelectData,updateUser,getSocket,senMessageToUser } = authenticateUse.actions
 
 export default authenticateUse.reducer
