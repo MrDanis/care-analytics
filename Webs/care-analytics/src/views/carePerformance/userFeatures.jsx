@@ -6,7 +6,7 @@ import {AiOutlineBars} from 'react-icons/ai'
 import {BsFillCalendarFill,BsFillHospitalFill,BsFillPersonVcardFill} from 'react-icons/bs'
 
 import { userFeatureData } from '../../data/userFeatureData'
-import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar';
+import { CircularProgressbarWithChildren, buildStyles} from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import CardViewTeamMember from './components/cardViewTeamMember'
 import TableViewTeamMember from './components/tableViewTeamMember'
@@ -216,7 +216,7 @@ const handleViewChange = (type) =>{
                              {
                               userFeatureData?.allStat.map((item,index)=>{
                                 return(
-                                   <div key={index} className={index%2!==0?'col-12 col-md-6 mb-1 mt-4 m-0 pb-2 p-0 d-flex border border-0 align-items-start justify-content-end':'col-12 col-md-6 mb-1 mt-4 m-0 pb-2 p-0 d-flex border border-0 align-items-start justify-content-start'}>
+                                   <div key={index} className={index%2!==0?'col-12 col-md-6 mb-1 mt-0 m-0 pb-2 p-0 d-flex border border-0 align-items-start justify-content-end':'col-12 col-md-6 mb-1 mt-0 m-0 pb-2 p-0 d-flex border border-0 align-items-start justify-content-start'}>
                                      <div className='d-flex align-items-start mt-1 pt-2 border border-0 border-success'>
                                      {
                                       index===0?
@@ -247,7 +247,7 @@ const handleViewChange = (type) =>{
                    </div>
                   {/* All Stats Component END*/}
                </div>
-               <div className="m-0 p-3 border border-1 rounded bg-white" style={{flex:3}}>
+               <div className="h-100 m-0 p-3 border border-1 rounded bg-white" style={{flex:3}}>
                  <div className='container-fluid m-0 p-0 border border-0 border-success'>
                    <div className='row m-0 p-0'>
                       <div className='col-12 m-0 p-0'>
@@ -262,17 +262,18 @@ const handleViewChange = (type) =>{
                               userFeatureData.allStats.map((item,index)=>{
                                 return(
                                     <div key={index} className="border border-0 border-danger m-0 pt-0 p-2 d-flex flex-column justify-content-center flex-wrap rounded" style={{flex:1}}>
-                                        <span className='text-muted m-0 mb-3 p-0 text-center'>
+                                        <span className='text-muted mb-3 p-0 text-start'>
                                              {item?.statText}
                                         </span>
-                                        <div className='border border-0 border-danger d-flex flex-wrap'>
+                                        <div style={{width:'150px'}}>
+                                       
                                            <CircularProgressbarWithChildren styles={buildStyles({
                                             pathColor:index===0?'rgb(0 198 249)':index===1?'rgb(166 166 255)':index===2?'rgb(220 189 92)':'rgb(88 92 229)',
                                             trailColor:'rgb(245 247 254)',
-                                            height:'100px'
+                                           
                                            })} value={parseInt(item?.statValue)}>
                                            <div className='m-0 p-0 border border-0 border-dark' style={{ marginTop: -5 }}>
-                                                 <p className='m-0 p-0 text-center text-dark fw-bold fs-2'>
+                                                 <p className='m-0 p-0 text-center text-dark fw-bold fs-4'>
                                                    {item?.statValue}
                                                  </p>
                                                  <p className='m-0 p-0 text-muted text-center'>
@@ -280,7 +281,6 @@ const handleViewChange = (type) =>{
                                                  </p>
                                            </div>
                                            </CircularProgressbarWithChildren>
-
                                         </div>
                                     </div>
                                 )
@@ -375,54 +375,23 @@ const handleViewChange = (type) =>{
                           isTableView==='card'?'Team Members':''
                         } 
                     </span>
-                 <div className='d-flex m-0 p-0'>
-                      <AiOutlineBars onClick={()=>{handleViewChange(0)}} className='mx-2' size={20}/>
-                      <FaColumns onClick={()=>{handleViewChange(1)}} size={20}/>   
+                 <div className='d-flex m-0 p-0 border border-0 border-danger' style={{cursor:'pointer'}}>
+                      <AiOutlineBars fill={isTableView==='card'?'#494bbb':'#000000'} onClick={()=>{handleViewChange(0)}} className='mx-2' size={20}/>
+                      <FaColumns   fill={isTableView!=='card'?'#494bbb':'#000000'}   onClick={()=>{handleViewChange(1)}} size={20}/>   
                  </div>
              </div>
+             {/* Team Member component (START) */}
              <Stack className='m-0 p-0 border border-0 border-danger'>
              {
                 isTableView==='card'?
                 <CardViewTeamMember data={userFeatureData?.teamMember?.teamMembersCards} />
                 :
-                <TableViewTeamMember data={'Table test data from component check'}/>
+                <TableViewTeamMember data={userFeatureData?.teamMember?.teamMembersTable.data} columns={userFeatureData?.teamMember?.teamMembersTable?.columns}/>
               }
              </Stack>
-             </Stack>
-             {/* Team Member component (START) */}
-             <div className='container-fluid mb-4 m-0 p-2 border border-1 rounded bg-transparent d-none'>
-                 <div className='row m-0 p-0'>
-                   <div className='col-12 d-flex align-items-center justify-content-between m-0 p-0 border border-0 border-danger'>
-                    <span className='fw-bold text-wrap'>
-                        {
-                          isTableView==='card'?'Team Members':''
-                        } 
-                    </span>
-                    <div className='d-flex border border-0 border-dark'>
-                     <div className='d-flex border border-0 border-success'>
-                      {/* back button */}
-                     
-                      {/* next button */}
-                     </div>
-                     <div className='d-flex align-items-center border border-0 border-danger'>
-                      <AiOutlineBars onClick={()=>{handleViewChange(0)}} className='mx-2' size={20}/>
-                      <FaColumns onClick={()=>{handleViewChange(1)}} size={20}/>   
-                     </div>
-                      {/* Card Icon */}
-                      {/* Table Icon */}
-                    </div>
-                   </div>
-                   <div className='col-12 m-0 p-0'>
-                   {
-                    isTableView==='card'?
-                      <CardViewTeamMember data={userFeatureData?.teamMember?.teamMembersCards} />
-                      :
-                      <TableViewTeamMember data={'Table test data from component check'}/>
-                   }
-                   </div>
-                 </div>
-             </div>
              {/* Team Member component (END) */}
+             </Stack>
+            
              {/* Hospital report component (START) */}
              <div className='container-fluid m-0 p-3 border border-0 border-success bg-white rounded'>
                       <div className='row m-0 p-0 border border-0 border-danger'>

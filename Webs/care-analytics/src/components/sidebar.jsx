@@ -1,6 +1,6 @@
 import React from 'react'
 import {Stack,Button} from 'react-bootstrap'
-import { Link,useHref } from 'react-router-dom'
+import { Link,useHref,useNavigate } from 'react-router-dom'
 import { colors } from '../assets/colors'
 import {FaUsers,FaPeopleArrows} from 'react-icons/fa'
 import {AiOutlineFolderOpen,AiFillHome} from 'react-icons/ai'
@@ -10,11 +10,16 @@ import { baseClientUrl,clientRoutesEnum } from '../assets/config'
 import { updateUser } from '../Features/UserClice'
 import { useSelector, useDispatch } from 'react-redux'
 const sidebar = () => {
+     const navigate = useNavigate();
      const { isLogin,role } = useSelector((state) => state.authUser);
      const dispatch = useDispatch();  
      const history = useHref();
      const handleLogOut =()=>{
       dispatch(updateUser({isLogin:isLogin?false:true}))
+  }
+  const handleCreateChatRoomAndNavigate =  ()=>{
+    
+    navigate(`/${baseClientUrl}/${clientRoutesEnum?.communication}`,{ replace: true });
   }
   return (
     <div className='customSidebar mt-2 m-0 px-2 p-0 rounded' >

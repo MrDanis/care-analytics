@@ -101,9 +101,41 @@ export const userFeatureData = {
             {memberName:'Danish',memberDesignation:'Care Coordinator'           , memberProfileData:{'Engagements':150,'Eligible':56,'Reassigned':710,'Patient in Care':789,'Task Complete':50,'Appointment Complete':18}},
             {memberName:'Missbah',memberDesignation:'Care Coordinator'          , memberProfileData:{'Engagements':150,'Eligible':56,'Reassigned':710,'Patient in Care':789,'Task Complete':50,'Appointment Complete':18}},
         ],
-        teamMembersTable: [
-            {}
-        ]
+        teamMembersTable: {
+            data:[
+                  {name:'Victoria Daigle',role:'Care Coordinator',engagements:905,eligible:400,patientInCare:200,taskComp:80,appointCom:40,reassigned:20},
+                  {name:'Victoria Daigle',role:'Care Coordinator',engagements:905,eligible:400,patientInCare:200,taskComp:80,appointCom:40,reassigned:20},
+                  {name:'Victoria Daigle',role:'Care Coordinator',engagements:905,eligible:400,patientInCare:200,taskComp:80,appointCom:40,reassigned:20},
+                  {name:'Victoria Daigle',role:'Care Coordinator',engagements:905,eligible:400,patientInCare:200,taskComp:80,appointCom:40,reassigned:20},
+                  {name:'Victoria Daigle',role:'Care Coordinator',engagements:905,eligible:400,patientInCare:200,taskComp:80,appointCom:40,reassigned:20},
+                  {name:'Victoria ',role:'Care Coordinator',engagements:905,eligible:400,patientInCare:200,taskComp:80,appointCom:40,reassigned:20},
+                  {name:'Victoria Daigle',role:'Care Coordinator',engagements:905,eligible:400,patientInCare:200,taskComp:80,appointCom:40,reassigned:20},
+                  {name:'Victoria Daigle',role:'Care Coordinator',engagements:905,eligible:400,patientInCare:200,taskComp:80,appointCom:40,reassigned:20},
+                  {name:'Victoria Daigle',role:'Care Coordinator',engagements:905,eligible:400,patientInCare:200,taskComp:80,appointCom:40,reassigned:20},
+                  {name:'Victoria Daigle',role:'Care Coordinator',engagements:905,eligible:400,patientInCare:200,taskComp:80,appointCom:40,reassigned:20},
+                  {name:'Victoria Daigle',role:'Care Coordinator',engagements:905,eligible:400,patientInCare:200,taskComp:80,appointCom:40,reassigned:20},
+                  {name:'Victoria Daigle',role:'Care Coordinator',engagements:905,eligible:400,patientInCare:200,taskComp:80,appointCom:40,reassigned:20},
+                  {name:'Victoria Daigle',role:'Care Coordinator',engagements:905,eligible:400,patientInCare:200,taskComp:80,appointCom:40,reassigned:20},
+                  {name:'Victoria Daigle',role:'Care Coordinator',engagements:905,eligible:400,patientInCare:200,taskComp:80,appointCom:40,reassigned:20},
+                  {name:'Victoria Daigle',role:'Care Coordinator',engagements:905,eligible:400,patientInCare:200,taskComp:80,appointCom:40,reassigned:20},
+                  {name:'Victoria Daigle',role:'Care Coordinator',engagements:905,eligible:400,patientInCare:200,taskComp:80,appointCom:40,reassigned:20},
+                  {name:'Victoria Daigle',role:'Care Coordinator',engagements:905,eligible:400,patientInCare:200,taskComp:80,appointCom:40,reassigned:20},
+                  {name:'Victoria Daigle',role:'Care Coordinator',engagements:905,eligible:400,patientInCare:200,taskComp:80,appointCom:40,reassigned:20},
+                  {name:'Victoria Daigle',role:'Care Coordinator',engagements:905,eligible:400,patientInCare:200,taskComp:80,appointCom:40,reassigned:20},
+                  {name:'Danish',role:'Care Coordinator',engagements:905,eligible:400,patientInCare:200,taskComp:80,appointCom:40,reassigned:20},
+            ],
+            columns:[
+                {field:'name',header:'Care Cordinators'},
+                {field:'role',header:'Role'},
+                {field:'engagements',header:'Engagements'},
+                {field:'eligible',header:'Eligible'},
+                {field:'patientInCare',header:'Patient in Care'},
+                {field:'taskComp',header:'Task Comp.'},
+                {field:'appointCom',header:'Appoint. Comp.'},
+                {field:'reassigned',header:'Reassigned'}
+            ]
+
+       }
     },
     hospitalVisitReport:[
         {

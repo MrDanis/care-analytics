@@ -37,6 +37,7 @@ const pmpCostAnalysisReport = ({title,data,xAxisLabels,type}) => {
                 borderWidth: 0
             }
         },
+        credits:false,
         series: data
     });
     // Charts updates will be handle in this component and this will remains the same for all the chart

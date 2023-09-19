@@ -5,7 +5,6 @@ import {HiMiniArrowUpRight} from 'react-icons/hi2'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 export default class cardViewTeamMember extends Component {
   constructor(props) {
     super(props);
@@ -54,14 +53,11 @@ export default class cardViewTeamMember extends Component {
       ]
     };
     return (
-        <div className="container testCon border border-0 border-dark" style={{minWidth:'100%'}}>
-
-        
-     <div className="position-relative border border-0 border-success mt-3 m-0 p-0" style={{width:'100%'}}>
-
+    <div className="container testCon border border-0 border-dark" style={{minWidth:'100%'}}>
+      <div className="position-relative border border-0 border-success mt-3 m-0 p-0" style={{width:'100%'}}>
         <Slider ref={c => (this.slider = c)} {...settings}>
             {
-                this.props?.data.map((item,index)=>{
+              this.props?.data.map((item,index)=>{
                     return(
                         <div className="p-2 d-flex border border-0 border-danger"> 
                         {/* Above div is for putting spacing  */}
@@ -80,31 +76,28 @@ export default class cardViewTeamMember extends Component {
                                <p className="text-muted m-0 p-0" style={{fontSize:'.85rem'}}> 
                                   {item?.memberDesignation}
                                </p>
-
                                </div>
                              </div>
                              {/* Member Data Column*/}
                              <div className="d-flex flex-column my-2 m-0 p-0 border border-0 border-success">
                               {
                                 Object.entries(item?.memberProfileData).map(([key,value])=>{
-                                    return(
-                               <p className="d-flex align-items-center justify-content-between border border-0 border-success my-2 p-0" > 
-                                {console.log('Key is : ',key,'Value : ',value)}
-                                 <span className="text-muted fw-light" style={{fontSIze:'.75rem'}}>
-                                    {/* {item?.memberName} */}
-                                    {key}
-                                 </span> 
-                                 <span className="text-dark fw-bold" style={{fontSIze:'1rem'}}>
-                                    {/* {item?.memberName} */}
-                                    {value}
-                                 </span> 
-                               </p>
-                                    )
+                                  return(
+                                    <p className="d-flex align-items-center justify-content-between border border-0 border-success my-2 p-0" > 
+                                     {console.log('Key is : ',key,'Value : ',value)}
+                                      <span className="text-muted fw-light" style={{fontSIze:'.75rem'}}>
+                                         {key}
+                                      </span> 
+                                      <span className="text-dark fw-bold" style={{fontSIze:'1rem'}}>
+                                         {value}
+                                      </span> 
+                                    </p>
+                                  )
                                 })
                               }
                              </div>
                              <div className="d-flex align-items-center justify-content-end m-0 px-2 p-0 ">
-                                  <Link className="d-flex align-items-center text-decoration-none" to={'/user-profile'}>
+                                  <Link className="d-flex align-items-center text-decoration-none" to={'/pre-release/user-profile'}>
                                      <small className="mx-3" style={{color:'#585CE5'}}>View Profile</small>
                                      <HiMiniArrowUpRight className="p-2" style={{backgroundColor:'#585CE5',borderRadius:'.5rem'}} fill="#ffffff" size={35}/>
                                   </Link>
@@ -113,19 +106,18 @@ export default class cardViewTeamMember extends Component {
                         </div>
                     )
                 })
-            }   
+             }   
         </Slider>
         <div className="d-flex justify-content-end mb-2 border border-0 border-danger position-absolute" style={{ right:50,top:-48}}>
           <button className="btn border-none outline-none box-shadow-none ghost m-0 p-0" onClick={this.previous}>
             <GrFormPrevious className='border border-1 bg-white rounded-pill p-1' size={27}/>
           </button>
           <button className="btn ghost m-0 p-0"  onClick={this.next}>
-            <GrFormNext className='border border-1 bg-white rounded-pill p-0 mx-2'  size={27}/>
+            <GrFormNext className='border border-1 bg-white rounded-pill p-0 mx-2' size={27}/>
           </button>
         </div>
      </div>
-     </div>  
-      
+     </div>   
     );
   }
 }

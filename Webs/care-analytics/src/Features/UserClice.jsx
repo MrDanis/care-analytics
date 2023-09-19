@@ -7,7 +7,8 @@ const initialState = {
   user:localStorage.getItem('user')===null?'':JSON.parse(localStorage.getItem('user')),
   multiSelectData:multiSelectData,
   loading:'idle',
-  socket:null
+  socket:null,
+  userName:''
 }
 // Creating the thunk for login the user
  export const UserLogin = createAsyncThunk('user/login',async(userCredentials)=>{
@@ -19,6 +20,7 @@ export const authenticateUse = createSlice({
   reducers: {
     updateUser:(state,action)=>{
       console.log('user request comming form the login is : ',action?.payload?.isLogin);
+       state.userName = action?.payload?.userName;
        state.isLogin = action?.payload?.isLogin;
     },
     getSocket:(state,action)=>{

@@ -95,3 +95,28 @@
 .sendMessageButton{
   cursor: pointer;
 }
+/* LoginScreen Styling (START) */
+.leftLoginBox
+{
+  background-color: #2196f3;
+}
+/* LoginScreen Styling (END) */
+
+/* Custom input for all the project */
+.customInput{
+  border-top-left-radius: .75rem;
+  border-bottom-right-radius: .75rem;
+  border:2px solid #0d8df6;
+}
+.customInput::placeholder{
+  color:#ffffff!important;
+}
+/* =================================================Custom Table Class==================================================(START) */
+.customTable{
+  border: none;
+}
+.customTable , .customTableHead , .customTableHeadRow , .customTableHeadHeading
+{
+  border:none;
+}
+/* =================================================Custom Table Class==================================================(END) */

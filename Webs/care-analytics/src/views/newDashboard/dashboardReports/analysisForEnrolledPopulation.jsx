@@ -8,10 +8,13 @@ const analysisForEnrolledPopulation = ({colors,type,data,title,discription}) => 
           type: type,
           height:250
           },
-          legend: {
-            enabled: false
-        },
         title:'',
+        legend:{
+          align:'left',
+          itemStyle: {
+            fontSize: '8px' // Set the desired font size for legends
+          }
+        },
         plotOptions:{
           pie: {
             innerSize: '75%', // Set the inner size to create a donut chart
@@ -19,15 +22,15 @@ const analysisForEnrolledPopulation = ({colors,type,data,title,discription}) => 
               enabled: false, // Show data labels inside the donut chart
               // format: '<b>{point.name}</b>: {point.percentage:.1f} %',
             },
-          }
-        },
-        legend:{
-              enabled:true
+            showInLegend: true
+          },
         },
         colors: colors,
         series:[{
+          type:'pie',
           data: data,
-        }]
+        }],
+        credits:false,
       });
   return (
     <div className='d-flex flex-column justify-content-center p-2 m-0  rounded h-100 costBenifiteBox' style={{}}>

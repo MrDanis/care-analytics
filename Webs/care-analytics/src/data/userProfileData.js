@@ -42,7 +42,7 @@ export const profileScreenData = {
                 genralCountTotall:100
             }
         ],
-        genralStatsData:[
+        genralStats:[
             {genralStatsText:'Appointments',genralStatsValPercent:10,genralStatsAchiveVal:54,genralStatsTotalVal:65},
             {genralStatsText:'Quality achived',genralStatsValPercent:10,genralStatsAchiveVal:1,genralStatsTotalVal:1},
             {genralStatsText:'Compliance achived',genralStatsValPercent:70,genralStatsAchiveVal:1,genralStatsTotalVal:1},
