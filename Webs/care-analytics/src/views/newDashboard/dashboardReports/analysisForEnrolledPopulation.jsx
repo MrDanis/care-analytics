@@ -30,10 +30,24 @@ const analysisForEnrolledPopulation = ({colors,type,data,title,discription}) => 
           type:'pie',
           data: data,
         }],
+        responsive: {
+          rules: [{
+              condition: {
+                  maxWidth: 500
+              },
+              chartOptions: {
+                  legend: {
+                      align: 'center',
+                      verticalAlign: 'bottom',
+                      layout: 'horizontal'
+                  }
+              }
+          }]
+      },
         credits:false,
       });
   return (
-    <div className='d-flex flex-column justify-content-center p-2 m-0  rounded h-100 costBenifiteBox' style={{}}>
+    <div className='d-flex flex-column justify-content-center p-2 m-0  rounded h-100 costBenifiteBox commonBorder' style={{}}>
       {/* Cost Benifite Card (Start)*/}
       <p className='mb-2 m-0 p-0 fw-bold text-justify text-wrap px-2' style={{fontSize:'.85rem'}}>
         {title}

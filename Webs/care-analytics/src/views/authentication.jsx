@@ -38,7 +38,7 @@ return (
 
     <div className='container-fluid m-0 p-0 border border-0 border-success' >
         <div className='row m-0 p-0 border-danger' style={{minHeight:'100vh'}}>
-              <div className='col-12 col-md-6 m-0 p-0 d-flex flex-column align-items-center justify-content-center leftLoginBox'>
+              <div className='col-12 col-lg-6 m-0 p-0 d-flex flex-column align-items-center justify-content-center leftLoginBox'>
                        <h1 className='text-center mt-3 p-2 text-light'>
                             Wellcome <p className='my-1'> to </p>  Data Q
                        </h1>
@@ -47,7 +47,7 @@ return (
                                Login please !
                        </button>
               </div>
-              <div className='col-12 col-md-6 m-0 p-0 d-flex align-items-center justify-content-center bg-primary'>
+              <div className='col-12 col-lg-6 m-0 p-0 d-none d-lg-flex align-items-center justify-content-center bg-primary'>
                   <Image className='m-0 p-0' src={Logo} fluid width={320} height={320}/>
 
                    {/* <image className='img-fluid m-0 p-0 border border-0 border-danger' src={Logo} style={{height:'250px',width:'250px'}} alt='img-not-found'/> */}

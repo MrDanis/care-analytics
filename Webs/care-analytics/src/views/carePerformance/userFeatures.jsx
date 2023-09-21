@@ -3,8 +3,7 @@ import {Container,Row,Stack,Dropdown} from 'react-bootstrap'
 import MainHome from '../../Layout/MainHome'
 import {FaUserCircle,FaColumns,FaBed,FaBell} from 'react-icons/fa'
 import {AiOutlineBars} from 'react-icons/ai'
-import {BsFillCalendarFill,BsFillHospitalFill,BsFillPersonVcardFill} from 'react-icons/bs'
-
+import {BsFillHospitalFill,BsFillPersonVcardFill} from 'react-icons/bs'
 import { userFeatureData } from '../../data/userFeatureData'
 import { CircularProgressbarWithChildren, buildStyles} from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
@@ -217,7 +216,7 @@ const handleViewChange = (type) =>{
                               userFeatureData?.allStat.map((item,index)=>{
                                 return(
                                    <div key={index} className={index%2!==0?'col-12 col-md-6 mb-1 mt-0 m-0 pb-2 p-0 d-flex border border-0 align-items-start justify-content-end':'col-12 col-md-6 mb-1 mt-0 m-0 pb-2 p-0 d-flex border border-0 align-items-start justify-content-start'}>
-                                     <div className='d-flex align-items-start mt-1 pt-2 border border-0 border-success'>
+                                     <div className='container d-flex align-items-start flex-wrap mt-1 px-0 pt-2 border border-0 border-success'>
                                      {
                                       index===0?
                                       <BsFillPersonVcardFill fill='#7963F9' size={35} className='mt-0 m-0 p-2' style={{borderRadius:'.25rem',backgroundColor:'#AFA1FF40'}}/>
@@ -230,11 +229,11 @@ const handleViewChange = (type) =>{
                                       :
                                       <FaBell fill='#AFA1FF' size={35} className='mt-0 m-0 p-2' style={{borderRadius:'.25rem',backgroundColor:'#AFA1FF40'}}/>
                                      }
-                                      <p className='text-muted mx-3 m-0 p-0'>
-                                         <small className='m-0 p-0 fw-light text-muted' style={{fontSize:'1rem'}}>
+                                      <p className='text-muted mx-3 m-0 p-0 border border-0 borde-success'>
+                                         <small className='m-0 p-0 fw-light text-muted text-wrap' style={{fontSize:'.75rem'}}>
                                            {item?.statLable}
                                          </small>
-                                        <p className='text-dark fw-bold fs-4 mt-2 m-0 p-0' style={{fontSize:'2rem'}}>
+                                        <p className='text-dark fw-bold fs-4 mt-2 m-0 p-0 text-wrap' style={{fontSize:'1rem'}}>
                                           {item?.statValue}
                                         </p>
                                       </p>

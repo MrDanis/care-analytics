@@ -37,14 +37,28 @@ const pmpCostAnalysisReport = ({title,data,xAxisLabels,type}) => {
                 borderWidth: 0
             }
         },
-        credits:false,
-        series: data
+        series: data,
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        align: 'center',
+                        verticalAlign: 'bottom',
+                        layout: 'horizontal'
+                    }
+                }
+            }]
+        },
+          credits:false,
     });
     // Charts updates will be handle in this component and this will remains the same for all the chart
     // This is the report component and it is only responsible for displaying the data
 
   return (
-    <div className=' p-2 m-0 border border-0 border-success bg-white rounded commonBorder h-100 pmpAnalysisBox'>
+    <div className=' p-2 m-0 bg-white rounded commonBorder h-100 pmpAnalysisBox commonBorder'>
       <p className='mb-2 m-0 p-0 fw-bold text-justify text-wrap px-2' style={{fontSize:'.85rem'}}>
         {title}
       </p>

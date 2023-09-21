@@ -18,7 +18,7 @@ const sidebar = () => {
       dispatch(updateUser({isLogin:isLogin?false:true}))
   }
   const handleCreateChatRoomAndNavigate =  ()=>{
-    
+
     navigate(`/${baseClientUrl}/${clientRoutesEnum?.communication}`,{ replace: true });
   }
   return (
@@ -29,9 +29,9 @@ const sidebar = () => {
                <AiOutlineFolderOpen fill={history.includes('new-dashboard')?'white':'black'} color='grey' size={20}/>
              </Link>
            </Button>
-           <Button  variant='ghost' style={{backgroundColor:history.includes('user-features')?colors.mainTemeColor:'transparent'}}>
+           <Button  variant='ghost' style={{backgroundColor:(history.includes('user-features')||history.includes('user-profile'))?colors.mainTemeColor:'transparent'}}>
            <Link to={`/${baseClientUrl}/${clientRoutesEnum?.userFeatures}`}>
-              <FaUsers fill={history.includes('user-features')?'white':'black'} color='white' size={20}/>
+              <FaUsers fill={(history.includes('user-features')||history.includes('user-profile'))?'white':'black'} color='white' size={20}/>
            </Link>  
            </Button>
            <Button  variant='ghost' style={{backgroundColor:history.includes('programs')?colors.mainTemeColor:'transparent'}}>

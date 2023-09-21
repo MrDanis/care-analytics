@@ -110,11 +110,20 @@ const specificProfile = () => {
           </div>
         </Row>
        <Row className='mx-0 px-4 py-0 border border-0 border-warning' style={{marginTop:'-2rem'}}>
-            <Stack className='m-0 p-0 border border-0 border-success align-items-start mb-4' direction="horizontal" gap={2}>
+           {/* Component for the web view (START)*/}
+            <Stack className='d-none d-lg-flex m-0 p-0 border border-0 border-success align-items-start mb-4' direction="horizontal" gap={2}>
               <AboutUserAndStats userData={profileScreenData?.genralStatsData?.totalCounts} userStats={profileScreenData?.genralStatsData?.allStats}/>
               <UserRecords recordData={profileScreenData?.genralStatsData?.genralCounts}/>
               <AllUserStats userData={profileScreenData.genralStatsData?.genralStats}/>
             </Stack>
+           {/* Component for the web view (END)*/}
+           {/* Component for the mobile view (START)*/}
+            <Stack className='d-flex d-lg-none m-0 p-0 border border-0 border-success align-items-start mb-4' direction="vertical" gap={2}>
+              <AboutUserAndStats userData={profileScreenData?.genralStatsData?.totalCounts} userStats={profileScreenData?.genralStatsData?.allStats}/>
+              <UserRecords recordData={profileScreenData?.genralStatsData?.genralCounts}/>
+              <AllUserStats userData={profileScreenData.genralStatsData?.genralStats}/>
+            </Stack>
+           {/* Component for the web mobile (END)*/}
             <Stack className='m-0 p-0 border border-0 border-success align-items-start mb-4' direction='vertical' gap={3}>
                 <UserTasksReport 
                   taskStatsData={profileScreenData?.userReports?.tasksReport?.taskStats}

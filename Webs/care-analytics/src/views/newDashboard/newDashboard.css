@@ -1,3 +1,12 @@
+.programSelectionMenu{
+
+}
+/* Banner Main Box (START)*/
+.bannerBottomBox{
+    display: flex;
+    /* align-items */
+}
+/* Banner Main Box (End)*/
 .mainDashboardStatsBox{
     flex-direction: row!important;
 }
@@ -8,15 +17,24 @@
 .pmpAnalysisBox{
    flex:3.05
 }
-@media (min-width>=320) and (max-width<=568)  {
+@media only screen and (max-width: 768px) and (min-width: 400px){
+    .costBenifiteBox,.pmpAnalysisBox{
+        flex:1
+    }
+}
+/* @media screen and (min-width>=320) and (max-width<=798)  {
     .mainDashboardStatsBox{
         flex-direction: column!important;
     }
     .enrollmentMainBox{
         flex-direction: column!important;
+        background-color: green;
+    }
+    .costBenifiteBox{
+        flex-grow: 2!important;
     }
     .costBenifiteBox,.pmpAnalysisBox{
         flex:1
     }
 
-}
+} */

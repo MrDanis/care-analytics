@@ -45,7 +45,6 @@ const chatMessages = ({data}) => {
                                 </p>
                             </div>    
                         </div>
-
                     )
                 })
               }

@@ -53,14 +53,14 @@ const newDashboard = () => {
                   </Stack>
                   </div>
               </div>
-              <div className='w-100 d-flex align-items-end justify-content-between p-2 border border-0 border-warning' style={{marginTop:'-2.5rem'}}>
+              <div className='w-100 d-flex align-items-end justify-content-between p-2 border border-0 border-warning bannerBottomBox' style={{marginTop:'-2.5rem'}}>
                 <div className='d-flex w-50 m-0 p-0 border border-0 border-success'>
                 <Stack direction='horizontal' gap={3}>
                       <div className='d-flex flex-column text-light'>
                         <p className='mb-2 m-0 p-0' style={{fontWeight:'400'}}>Program <FaStarOfLife className='mx-1' size={8} fill='red'/></p>
                          <Dropdown className='rounded'>
                           <Dropdown.Toggle className='d-flex align-items-center justify-content-between outline-none border-0 shadow fs-6 w-100 fw-normal' style={{backgroundColor:'#7a7cec'}} id="dropdown-basic">
-                            <small className='text-wrap' style={{fontWeight:'300'}}>
+                            <small className='text-wrap programSelectionMenu' style={{fontWeight:'300'}}>
                             Chronic Care Management
                             </small> 
                           </Dropdown.Toggle>
@@ -88,7 +88,7 @@ const newDashboard = () => {
                       </div>    
                 </Stack>
                 </div>
-                <div className='d-flex m-0 p-0 border border-0 border-danger'>
+                <div className='d-flex m-0 p-0 border border-1 border-danger'>
                   {/* <BsFillCalendarFill fill='white' size={25} className='p-0 mx-4'/> */}
                   <Stack direction="horizontal" gap={0}>
                      <div className="px-2 p-1" style={{backgroundColor:'#7a7cec',borderTopLeftRadius:'.25rem',borderBottomLeftRadius:'.25rem'}}>
@@ -163,7 +163,7 @@ const newDashboard = () => {
                     </Stack>
                 </div>
                </Stack>
-               <Stack className='mt-4 m-0 p-0 align-items-start enrollmentMainBox' direction='horizontal' gap={3}>
+               <Stack className='mt-4 m-0 p-0 border border-0 border-danger align-items-start enrollmentMainBox' direction='horizontal' gap={3}>
                   {/* Cost Benifite Analysis Report (Start)*/}
                    <AnalysisForEnrolledPopulation
                     colors={newdashboardData?.analysisPopulationColors}
