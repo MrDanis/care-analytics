@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="icon_dashboard_home" transform="translate(-127 -437)">
+    <rect id="Rectangle_78" data-name="Rectangle 78" width="24" height="24" transform="translate(127 437)" fill="none"/>
+    <g id="Group_2060" data-name="Group 2060" transform="translate(-3 -3)">
+      <circle id="Ellipse_34" data-name="Ellipse 34" cx="5.5" cy="5.5" r="5.5" transform="translate(130 440)" />
+      <circle id="Ellipse_40" data-name="Ellipse 40" cx="5.5" cy="5.5" r="5.5" transform="translate(130 453)" />
+      <circle id="Ellipse_38" data-name="Ellipse 38" cx="5.5" cy="5.5" r="5.5" transform="translate(143 440)" />
+      <circle id="Ellipse_39" data-name="Ellipse 39" cx="5.5" cy="5.5" r="5.5" transform="translate(143 453)" />
+    </g>
+  </g>
+</svg>

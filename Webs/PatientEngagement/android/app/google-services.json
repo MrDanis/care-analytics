@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "726634767999",
+    "project_id": "patientengagement",
+    "storage_bucket": "patientengagement.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:726634767999:android:bff2256c4e3c688b2fc14a",
+        "android_client_info": {
+          "package_name": "com.patientengagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "726634767999-5a3ggk2eeasdrgeve2rem9kqgrej9u6o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.patientengagement",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "726634767999-5rsr6hq1hre05r2iqa5ac7rs3s6sb4b9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.patientengagement",
+            "certificate_hash": "ed6dcbac4657c585f0cc576b6c94d02249f07769"
+          }
+        },
+        {
+          "client_id": "726634767999-33eg7ichbi76s40da30ia1cun283sc3r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrDaejJa77mNVfACUE9M82zJZnLkEXc0w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "726634767999-33eg7ichbi76s40da30ia1cun283sc3r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "726634767999-a234shnvfd12255tcbae2t6b29nda2c3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.wisemani.360PatientEngagement"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

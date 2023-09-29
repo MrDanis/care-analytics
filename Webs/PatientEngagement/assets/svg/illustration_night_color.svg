@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55">
+  <g id="illustration_night_color" transform="translate(13225 16738)">
+    <g id="Group_2100" data-name="Group 2100" transform="translate(-13245 -16890)">
+      <text id="Night" transform="translate(47 169)" font-size="14" font-family="NunitoSans-Bold, Nunito Sans" font-weight="700"><tspan x="-17.92" y="0">Night</tspan></text>
+      <g id="night-2" data-name="night" transform="translate(19.624 181.47)">
+        <g id="Group_1631" data-name="Group 1631" transform="translate(16.646)">
+          <path id="Path_316" data-name="Path 316" d="M37.935,16.686a.771.771,0,0,0-.856-.238,8.132,8.132,0,0,1-2.753.463,8.452,8.452,0,0,1-4.75-15.444.769.769,0,0,0-.321-1.4A7.462,7.462,0,0,0,28.176,0a11.53,11.53,0,1,0,9.818,17.575A.774.774,0,0,0,37.935,16.686Z" transform="translate(-16.646 0)"/>
+        </g>
+      </g>
+    </g>
+    <rect id="Rectangle_1945" data-name="Rectangle 1945" width="55" height="55" transform="translate(-13225 -16738)" fill="none"/>
+  </g>
+</svg>

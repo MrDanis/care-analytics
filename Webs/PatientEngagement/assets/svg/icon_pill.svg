@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="icon_pill" transform="translate(12559 15316)">
+    <g id="pill" transform="translate(-12557 -15314)">
+      <path id="Path_1" data-name="Path 1" d="M17.71,1.794C15.517-.4,12.172-.61,10.239,1.323L4.974,6.588,1.331,10.23C-.6,12.164-.391,15.508,1.8,17.7s5.539,2.4,7.472.471l3.642-3.643,5.265-5.265C20.115,7.333,19.9,3.987,17.71,1.794ZM8.335,17.234c-1.412,1.412-3.921,1.2-5.593-.471s-1.883-4.18-.471-5.593L5.914,7.528l6.064,6.064Z" transform="translate(-0.009 0)" fill="#4caf50"/>
+    </g>
+    <rect id="Rectangle_1882" data-name="Rectangle 1882" width="24" height="24" transform="translate(-12559 -15316)" fill="none"/>
+  </g>
+</svg>

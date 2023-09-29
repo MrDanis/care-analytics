@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="icon_profile_connected_devices" transform="translate(-48 -344)">
+    <rect id="Rectangle_1895" data-name="Rectangle 1895" width="24" height="24" transform="translate(48 344)" fill="none"/>
+    <path id="ic_bluetooth_connected_24px" d="M7,12,5,10,3,12l2,2ZM17.71,7.71,12,2H11V9.59L6.41,5,5,6.41,10.59,12,5,17.59,6.41,19,11,14.41V22h1l5.71-5.71L13.41,12l4.3-4.29ZM13,5.83l1.88,1.88L13,9.59Zm1.88,10.46L13,18.17V14.41l1.88,1.88ZM19,10l-2,2,2,2,2-2Z" transform="translate(48 344)" fill="#ff9600"/>
+  </g>
+</svg>

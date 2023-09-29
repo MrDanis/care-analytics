@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="illustration_Noon" transform="translate(10772 15253)">
+    <rect id="Rectangle_1848" data-name="Rectangle 1848" width="30" height="30" transform="translate(-10772 -15253)" fill="none"/>
+    <g id="cloudy" transform="translate(-10772 -15285.974)">
+      <path id="Path_310" data-name="Path 310" d="M170.622,38.5a.879.879,0,0,0,.879-.879v-1.77a.879.879,0,1,0-1.758,0v1.77A.879.879,0,0,0,170.622,38.5Z" transform="translate(-159.797)" fill="#ffc107"/>
+      <path id="Path_311" data-name="Path 311" d="M2.851,133.973l-1.533-.885a.879.879,0,1,0-.879,1.522l1.533.885a.879.879,0,1,0,.879-1.522Z" transform="translate(0 -92.254)" fill="#ffc107"/>
+      <path id="Path_312" data-name="Path 312" d="M1.983,313.986.45,314.87a.88.88,0,0,0,.44,1.64c.4,0,.5-.192,1.971-1a.879.879,0,0,0-.879-1.522Z" transform="translate(-0.011 -262.552)" fill="#ffc107"/>
+      <path id="Path_313" data-name="Path 313" d="M314.64,135.5l1.533-.885a.879.879,0,1,0-.879-1.522l-1.533.885a.879.879,0,1,0,.879,1.522Z" transform="translate(-294.963 -92.254)" fill="#ffc107"/>
+      <path id="Path_314" data-name="Path 314" d="M70,135.229a8.347,8.347,0,0,1,7.126-6.783A7.028,7.028,0,1,0,66.637,137.8,6.726,6.726,0,0,1,70,135.229Z" transform="translate(-60.95 -85.667)" fill="#ffc107"/>
+      <path id="Path_315" data-name="Path 315" d="M124.2,201.092a6.592,6.592,0,0,0-12.7,2.406,4.957,4.957,0,0,0,.56,9.881c13.829-.014,13.072.035,13.313-.039a6.153,6.153,0,0,0-1.171-12.248Z" transform="translate(-100.827 -152.507)" fill="#ffc107"/>
+    </g>
+  </g>
+</svg>
