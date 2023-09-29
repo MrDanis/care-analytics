@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">PatientEngagement</string>
+    <!-- App id for new patientEngagement app by (Danish) -->
+    <string name="facebook_app_id">642414564165987</string>
+     <!-- <string name="facebook_app_id">1266675944139180</string> -->
+    <string name="fb_login_protocol_scheme">fb1266675944139180</string>
+    <string
+    name="facebook_client_token"
+  >b82299facf6d72bccc9e3b80e40ed68b</string>
+    <string
+    name="server_client_id"
+  >726634767999-33eg7ichbi76s40da30ia1cun283sc3r.apps.googleusercontent.com</string>
+    <string
+    name="google_maps_key"
+    templateMergeStrategy="preserve"
+    translatable="false"
+  >AIzaSyCgz4YIw1sMSPhgJ4p9DKVm8o9zKHiJGvs</string>
+    <string
+            moduleConfig="true"
+            name="CodePushDeploymentKey"
+    >e1Xxt7OVvaTHQngTNzI4v019oXtijcnJSpbhL</string>
+</resources>

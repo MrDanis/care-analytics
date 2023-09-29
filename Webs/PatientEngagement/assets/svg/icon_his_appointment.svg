@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="icon_his_appointment" transform="translate(10606 1976)">
+    <rect id="Rectangle_2034" data-name="Rectangle 2034" width="24" height="24" transform="translate(-10606 -1976)" fill="none"/>
+    <g id="Group_314" data-name="Group 314" transform="translate(-10606 -1976)">
+      <rect id="Rectangle_78" data-name="Rectangle 78" width="24" height="24" transform="translate(0)" fill="none"/>
+      <path id="ic_today_24px" d="M22.2,3.4H21V1H18.6V3.4H9V1H6.6V3.4H5.4A2.389,2.389,0,0,0,3.012,5.8L3,22.6A2.4,2.4,0,0,0,5.4,25H22.2a2.407,2.407,0,0,0,2.4-2.4V5.8A2.407,2.407,0,0,0,22.2,3.4Zm0,19.2H5.4V9.4H22.2ZM7.8,11.8h6v6h-6Z" transform="translate(-2 -1)" fill="#607d8b"/>
+    </g>
+  </g>
+</svg>

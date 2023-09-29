@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e57373"/>
+      <stop offset="1" stop-color="#f44336"/>
+    </linearGradient>
+  </defs>
+  <g id="illustration_alert_not_taken" transform="translate(-16 -151.268)">
+    <circle id="Ellipse_31" data-name="Ellipse 31" cx="20" cy="20" r="20" transform="translate(16 151.267)" fill="url(#linear-gradient)"/>
+    <g id="priority_high-24px" transform="translate(24 159.267)">
+      <path id="Path_193" data-name="Path 193" d="M0,0H24V24H0Z" fill="none"/>
+      <circle id="Ellipse_45" data-name="Ellipse 45" cx="2" cy="2" r="2" transform="translate(10 17)" fill="#fff"/>
+      <path id="Path_194" data-name="Path 194" d="M10,3h4V15H10Z" fill="#fff"/>
+    </g>
+  </g>
+</svg>

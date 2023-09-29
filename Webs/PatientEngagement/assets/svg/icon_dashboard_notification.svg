@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="icon_dashboard_notification" transform="translate(-101 -610)">
+    <g id="Group_314" data-name="Group 314">
+      <rect id="Rectangle_78" data-name="Rectangle 78" width="24" height="24" transform="translate(101 610)" fill="none"/>
+      <path id="ic_notifications_24px" d="M13.846,26.5a2.469,2.469,0,0,0,2.462-2.462H11.385A2.461,2.461,0,0,0,13.846,26.5Zm7.385-7.385V12.962c0-3.778-2.018-6.942-5.538-7.778V4.346a1.846,1.846,0,0,0-3.692,0v.837c-3.532.837-5.538,3.988-5.538,7.778v6.154L4,21.577v1.231H23.692V21.577Z" transform="translate(99.154 607.5)" />
+    </g>
+  </g>
+</svg>

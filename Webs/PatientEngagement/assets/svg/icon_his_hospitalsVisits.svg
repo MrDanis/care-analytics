@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="icon_his_hospitalsVisits" transform="translate(-264 -664)">
+    <rect id="Rectangle_2034" data-name="Rectangle 2034" width="24" height="24" transform="translate(264 664)" fill="none"/>
+    <g id="Group_314" data-name="Group 314" transform="translate(264 664)">
+      <rect id="Rectangle_78" data-name="Rectangle 78" width="24" height="24" transform="translate(0)" fill="none"/>
+      <g id="hospital">
+        <g id="Group_2406" data-name="Group 2406" transform="translate(0 8.737)">
+          <path id="Path_780" data-name="Path 780" d="M3.143,186.392H.7a.7.7,0,0,0-.7.7v14.56H3.143Z" transform="translate(0 -186.392)" fill="#607d8b"/>
+          <path id="Path_781" data-name="Path 781" d="M447.392,186.392h-2.44v15.263h3.143V187.1A.7.7,0,0,0,447.392,186.392Z" transform="translate(-424.095 -186.392)" fill="#607d8b"/>
+        </g>
+        <g id="Group_2407" data-name="Group 2407" transform="translate(4.549)">
+          <path id="Path_782" data-name="Path 782" d="M0,0H4.7V2.445H0Z" transform="translate(8.674 19.302) rotate(90)" fill="#607d8b"/>
+          <path id="Path_783" data-name="Path 783" d="M111.247,2.888h-2.214V.7a.7.7,0,0,0-.7-.7h-7.562a.7.7,0,0,0-.7.7V2.888H97.751a.7.7,0,0,0-.7.7V24h4.822V18.6a.7.7,0,0,1,.7-.7h3.852a.7.7,0,0,1,.7.7V24h4.822V3.591a.7.7,0,0,0-.7-.7Zm-9.932,12.578h-.757a.7.7,0,1,1,0-1.406h.757a.7.7,0,1,1,0,1.406Zm0-2.812h-.757a.7.7,0,1,1,0-1.406h.757a.7.7,0,1,1,0,1.406Zm0-2.812h-.757a.7.7,0,0,1,0-1.406h.757a.7.7,0,0,1,0,1.406Zm3.563,5.625h-.757a.7.7,0,0,1,0-1.406h.757a.7.7,0,1,1,0,1.406Zm0-2.812h-.757a.7.7,0,0,1,0-1.406h.757a.7.7,0,1,1,0,1.406Zm0-2.812h-.757a.7.7,0,0,1,0-1.406h.757a.7.7,0,0,1,0,1.406Zm1.038-4.2H105.2V6.35a.7.7,0,1,1-1.406,0V5.636h-.714a.7.7,0,1,1,0-1.406h.714V3.516a.7.7,0,1,1,1.406,0V4.23h.714a.7.7,0,1,1,0,1.406Zm2.524,9.83h-.757a.7.7,0,1,1,0-1.406h.757a.7.7,0,1,1,0,1.406Zm0-2.812h-.757a.7.7,0,1,1,0-1.406h.757a.7.7,0,1,1,0,1.406Zm0-2.812h-.757a.7.7,0,1,1,0-1.406h.757a.7.7,0,0,1,0,1.406Z" transform="translate(-97.048)" fill="#607d8b"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

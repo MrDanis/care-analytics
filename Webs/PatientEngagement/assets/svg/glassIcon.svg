@@ -1,0 +1,24 @@
+<svg width="46" height="75" viewBox="0 0 46 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="46" height="75" fill="#E5E5E5"/>
+<rect width="375" height="1277" transform="translate(-247 -204)" fill="#F5F6FA"/>
+<g filter="url(#filter0_d_0_1)">
+<rect x="-54.7971" y="-52" width="155.5" height="208" rx="8" fill="white"/>
+</g>
+<path d="M45.803 0L41.0974 71.9948C41.0974 72.6491 40.8378 73.2768 40.3755 73.7399C39.9133 74.2031 39.2861 74.4639 38.6317 74.4652H7.29755C6.97155 74.4676 6.64829 74.4056 6.34639 74.2825C6.04449 74.1595 5.76993 73.9779 5.53853 73.7483C5.30713 73.5186 5.12348 73.2455 4.99816 72.9445C4.87283 72.6435 4.80831 72.3208 4.80832 71.9948L0.102783 0H45.803Z" fill="#BBDEFB"/>
+<path d="M41.0176 19.2879L38.1943 66.6726C38.1943 67.9996 37.5214 71.7452 35.0133 71.9805H34.764H11.2363C8.55881 71.9805 7.81063 68.0325 7.81063 61.9389L4.9873 19.2784L41.0176 19.2879Z" fill="#2962FF"/>
+<circle cx="29.5538" cy="63.026" r="4.13831" fill="#E3F2FD"/>
+<circle cx="22.9528" cy="53.7792" r="2.82172" fill="#E3F2FD"/>
+<circle cx="25.7644" cy="45.6349" r="1.85423" fill="#E3F2FD"/>
+<defs>
+<filter id="filter0_d_0_1" x="-86.7971" y="-76" width="219.5" height="272" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="8"/>
+<feGaussianBlur stdDeviation="16"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape"/>
+</filter>
+</defs>
+</svg>

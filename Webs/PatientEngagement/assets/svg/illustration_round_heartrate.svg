@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <g id="illustration_round_heartrate" transform="translate(-16 -959)">
+    <circle id="Ellipse_116" data-name="Ellipse 116" cx="25" cy="25" r="25" transform="translate(16 959)" fill="#58cc02"/>
+    <g id="Group_2044" data-name="Group 2044" transform="translate(-20 -25)">
+      <rect id="Rectangle_1913" data-name="Rectangle 1913" width="24" height="24" transform="translate(49 998)" fill="none"/>
+      <path id="ic_favorite_24px" d="M14,25.02l-1.74-1.584C6.08,17.832,2,14.136,2,9.6A6.536,6.536,0,0,1,8.6,3,7.186,7.186,0,0,1,14,5.508,7.186,7.186,0,0,1,19.4,3,6.536,6.536,0,0,1,26,9.6c0,4.536-4.08,8.232-10.26,13.848Z" transform="translate(47 996)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

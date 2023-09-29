@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="icon_his_Procedures" transform="translate(10606 1976)">
+    <rect id="Rectangle_2034" data-name="Rectangle 2034" width="24" height="24" transform="translate(-10606 -1976)" fill="none"/>
+    <g id="Group_314" data-name="Group 314" transform="translate(-10606 -1976)">
+      <rect id="Rectangle_78" data-name="Rectangle 78" width="24" height="24" transform="translate(0)" fill="none"/>
+      <g id="ethics">
+        <path id="Path_789" data-name="Path 789" d="M121,127.328A6.328,6.328,0,1,0,127.328,121,6.338,6.338,0,0,0,121,127.328Zm9.633-.914-4.008,4.022-2.6-2.616.984-.984,1.617,1.6,3.023-3.009Z" transform="translate(-115.328 -115.328)" fill="#607d8b"/>
+        <path id="Path_790" data-name="Path 790" d="M12,24A12.041,12.041,0,0,0,24,12H21.188A9.164,9.164,0,1,1,12,2.859a9.013,9.013,0,0,1,5.47,1.828L16.4,5.756l4.964.984-.984-4.964-.9.9A11.981,11.981,0,1,0,12,24Z" fill="#607d8b"/>
+      </g>
+    </g>
+  </g>
+</svg>
